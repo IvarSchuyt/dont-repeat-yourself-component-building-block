@@ -3,14 +3,34 @@
 </script>
 
 <section>
+    <div>
+        <h3>Vragen over je betalingen?</h3>
+        <button>
+            <img src="src/lib/assets/close.svg" alt="sluit chat">
+        </button>    
+    </div>  
+
+    <div class="conversation">
+        <article class="received">
+            <p>Hoi! Ik ben de chatbot van oba.nl. Waar kan ik je mee helpen?</p>
+        </article>
+        <article class="sent">
+            <p>Hoe kan ik het tegoed van mijn pas opwaarderen?</p>
+        </article>
+        <article class="received">
+            <p>Hoi! Ik ben de chatbot van oba.nl. Waar kan ik je mee helpen?</p>
+        </article>
+        <article class="sent">
+            <p>Hoe kan ik het tegoed van mijn pas opwaarderen?</p>
+        </article>
+    </div>
 
     <div>
-    <h3>Vragen over uw betalingen?</h3>
-        <p>Onze klantenservice is bereikbaar op werkdagen van 9.00 tot 17.00 uur. </p>
-        <p>06-12345678</p>
-        <p>janjansen@email.nl</p>
-    </div>
-    <button>venster sluiten</button>
+        <input type="text" placeholder="Typ hier je vraag">
+        <button>
+            <img src="src/lib/assets/send.svg" alt="stuur bericht">
+        </button>  
+    </div>  
 
 </section>
 
@@ -20,31 +40,49 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 33vw;
-        height: 50vh;
-        max-height: 50vh;
-        margin-top: 25vh;
+        width: 100vw;
+        height: 100vh;
         border: solid black 0.25rem;
+        background: #E3E9F9;
     }
 
-    p{
-        padding: 0 1rem;
-        font-size: 1rem;
+    div{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
     }
 
-    p:nth-of-type(2){
-        margin-top: 2rem;
+    .conversation{
+        flex-direction: column;
+        font-size: 0.9rem;
+        margin-top: -20rem;
     }
 
-    h3{
-        padding: 1rem 2rem 0rem 1rem;
-        margin: 0 0 5rem 0;
+    article{
+        background: #F5F5F5;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .received{
+        max-width: 70vw;
+    }
+
+    .sent{
+        margin-left: 10vw;
     }
 
     button{
         border: none;
         background: transparent;
-        padding: 0 0 1rem 0;
     }
+
+    input{
+        border-radius: 0.5rem;
+        border: none;
+        width: 80vw;
+        text-indent: 1rem;
+    } 
 
 </style>
