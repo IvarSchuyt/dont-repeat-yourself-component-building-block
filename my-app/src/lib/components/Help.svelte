@@ -1,5 +1,5 @@
 <script>
-
+    
 </script>
 
 <section>
@@ -59,6 +59,7 @@
     }
 
     article{
+        display: inline-block;
         background: #F5F5F5;
         border-radius: 0.5rem;
         padding: 1rem;
@@ -84,5 +85,17 @@
         width: 80vw;
         text-indent: 1rem;
     } 
+
+@media only screen and (min-width: 770px) {
+
+    section{
+        width: 33vw;
+        height: 75vh;
+        margin-top: 12.5vh;
+    }
+
+}
+
+
 
 </style>
