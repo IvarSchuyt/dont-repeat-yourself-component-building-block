@@ -6,7 +6,7 @@
     <div>
         <h3>Vragen over je betalingen?</h3>
         <button>
-            <img src="src/lib/assets/close.svg" alt="sluit chat">
+            <img src="src/lib/assets/close.svg" height="24" width="24" alt="sluit chat" loading="lazy">
         </button>    
     </div>  
 
@@ -28,7 +28,7 @@
     <div>
         <input type="text" placeholder="Typ hier je vraag">
         <button>
-            <img src="src/lib/assets/send.svg" alt="stuur bericht">
+            <img src="src/lib/assets/send.svg" height="24" width="24" alt="stuur bericht" loading="lazy">
         </button>  
     </div>  
 

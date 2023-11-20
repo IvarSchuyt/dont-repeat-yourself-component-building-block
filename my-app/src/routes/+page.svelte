@@ -1,39 +1,32 @@
-<!-- <script>
+<script defer>
+
+  import Help2 from '$lib/components/Help2.svelte';
+
  console.log("hello")
- import { onMount } from 'svelte';
- import Help from '$lib/components/Help.svelte';
- 
- onMount(() => {
-     let chatButton = document.querySelector(".chat-open");
-     let chat = document.querySelector("aside");
-     let chatClose = document.querySelector(".chat-close");
-     console.log("hello")
+  
+//  import { onMount } from 'svelte';
+//  onMount(() => {
+//      let chat = document.querySelector("aside");
+//      let chatButton = document.querySelector(".button-chat")
+     
+//     chatButton.addEventListener("click", showChat);
+//     function showChat() {
+//     chat.classList.toggle("chat-hidden");
+//     chat.classList.toggle("chat-shown");
+//     chatButton.hidden = true;
+//     chatButton.classList.toggle("button-chat")
+//     }
+//   });
 
-    chatButton.addEventListener("click", showChat);
-    chatClose.addEventListener("click", closeChat);
-
-    function showChat() {
-      aside.classList.add("chat-shown");
-      console.log("hello")
-    }
-    function closeChat() {
-    aside.classList.remove("chat-shown");
-    }
-  });
-
-</script> -->
-
-<script>
-     import Help from '$lib/components/Help.svelte';
 </script>
 
 <main>
 
-    <button class="chat-open">Hulp nodig?</button>
+    <!-- <button class="button-chat">Hulp nodig?</button> -->
 
-    <aside>
-        <Help/>
-    </aside>
+    <!-- <aside class="chat-hidden"> -->
+        <Help2/>
+    <!-- </aside> -->
 
 </main>
 
@@ -44,7 +37,7 @@
         justify-content: flex-end;
     }
 
-    .chat-open{
+    .button-chat{
         rotate: -90deg;
         margin-top: 50vh;
         margin-right: -2rem;
@@ -55,17 +48,18 @@
         padding: 1rem;
     }
 
-    aside{
+    .chat-hidden{
         display: none;
         margin-right: -50rem;
     }
 
     .chat-shown{
+        display: block;
         animation-name: chat-shown;
         animation-duration: 0.6s;
         animation-iteration-count: 1;
     }
-        @keyframes design {
+        @keyframes chat-shown {
       0% {
         margin-right: -50rem;
       }
@@ -76,3 +70,21 @@
 
 
 </style>
+
+<!-- import { onMount } from 'svelte';
+onMount(() => {
+    let chat = document.querySelector("aside");
+    let chatButton = document.querySelector(".chat-open");
+    let chatClose = document.querySelector(".chat-close");
+    console.log(chat)
+
+   chatButton.addEventListener("click", showChat);
+   chatClose.addEventListener("click", closeChat);
+
+   function showChat() {
+   chat.classList.add("chat-shown");
+   }
+   function closeChat() {
+   chat.classList.remove("chat-shown");
+   }
+ }); -->
