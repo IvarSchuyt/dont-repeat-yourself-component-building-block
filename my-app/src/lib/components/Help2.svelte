@@ -6,14 +6,15 @@
 
     <details>
         <summary> Hulp nodig? </summary>
+        <summary> Sluit chat </summary>
         
+        <div class="chat">
+            
+            
             <div>
-                <h3>Vragen over je betalingen?</h3>
-                <button>
-                    <img src="src/lib/assets/close.svg" height="24" width="24" alt="sluit chat" loading="lazy">
-                </button>    
+                <h3>Vragen over je betalingen?</h3>  
             </div>  
-        
+            
             <div class="conversation">
                 <article class="received">
                     <p>Hoi! Ik ben de chatbot van oba.nl. Waar kan ik je mee helpen?</p>
@@ -28,15 +29,17 @@
                     <p>Hoe kan ik het tegoed van mijn pas opwaarderen?</p>
                 </article>
             </div>
-        
+            
             <div>
                 <input type="text" placeholder="Typ hier je vraag">
                 <button>
                     <img src="src/lib/assets/send.svg" height="24" width="24" alt="stuur bericht" loading="lazy">
                 </button>  
-        </div>  
-
-
+            </div>  
+            
+            
+        </div>
+        
     </details>
 
 </section>
@@ -49,20 +52,46 @@
         justify-content: space-between;
         width: 100vw;
         height: 100vh;
-        /* border: solid black 0.25rem; */
-        /* background: #E3E9F9; */
+    }
+
+    details{
+        border: solid black 0.2rem;
+        background: #E3E9F9;
+    }
+
+    details summary {
+        cursor: pointer;
+        transition: margin 150ms ease-out;
+    }
+
+    details[open] summary {
+        margin-bottom: 1rem;
+        font-size: 0;
+        /* color: transparent; */
+    }
+    
+    details[open] summary::marker {
+        font-size: initial;
+}
+
+    summary{
+        user-select: none;
     }
 
     div{
         display: flex;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .chat{
+        padding: 0;
+        display: block;
     }
 
     .conversation{
         flex-direction: column;
         font-size: 0.9rem;
-        margin-top: -20rem;
     }
 
     article{
@@ -98,7 +127,6 @@
     section{
         width: 33vw;
         height: 75vh;
-        margin-top: 12.5vh;
     }
 
 }
