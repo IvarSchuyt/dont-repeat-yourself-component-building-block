@@ -4,16 +4,14 @@
 
 <section>
 
-    <details>
+    <!-- DESKTOP -->
+    <details class="desktop">
         <summary> Hulp nodig? </summary>
         <summary> Sluit chat </summary>
         
         <div class="chat">
             
-            
-            <div>
-                <h3>Vragen over je betalingen?</h3>  
-            </div>  
+            <h3>Vragen over je betalingen?</h3>  
             
             <div class="conversation">
                 <article class="received">
@@ -42,6 +40,43 @@
         
     </details>
 
+    <!-- MOBILE -->
+    <details open class="mobile">
+        <summary> Hulp nodig? </summary>
+        <summary> Sluit chat </summary>
+        
+        <div class="chat">
+            
+            <h3>Vragen over je betalingen?</h3>  
+            
+            <div class="conversation">
+                <article class="received">
+                    <p>Hoi! Ik ben de chatbot van oba.nl. Waar kan ik je mee helpen?</p>
+                </article>
+                <article class="sent">
+                    <p>Hoe kan ik het tegoed van mijn pas opwaarderen?</p>
+                </article>
+                <article class="received">
+                    <p>Hoi! Ik ben de chatbot van oba.nl. Waar kan ik je mee helpen?</p>
+                </article>
+                <article class="sent">
+                    <p>Hoe kan ik het tegoed van mijn pas opwaarderen?</p>
+                </article>
+            </div>
+            
+            <div>
+                <input type="text" placeholder="Typ hier je vraag">
+                <button>
+                    <img src="src/lib/assets/send.svg" height="24" width="24" alt="stuur bericht" loading="lazy">
+                </button>  
+            </div>  
+            
+            
+        </div>
+        
+    </details>
+
+
 </section>
 
 <style>
@@ -50,8 +85,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 100vw;
-        height: 100vh;
+
+        width: 33vw;
+        height: 75vh;
+    }
+
+    .desktop{
+        display: none;
     }
 
     details{
@@ -67,12 +107,15 @@
     details[open] summary {
         margin-bottom: 1rem;
         font-size: 0;
-        /* color: transparent; */
+    }
+
+    details[open] h3 {
+        margin: -2rem 0 1rem 1rem;
     }
     
     details[open] summary::marker {
         font-size: initial;
-}
+    }
 
     summary{
         user-select: none;
@@ -122,15 +165,29 @@
         text-indent: 1rem;
     } 
 
-@media only screen and (min-width: 770px) {
+@media only screen and (max-width: 770px) {
 
     section{
-        width: 33vw;
-        height: 75vh;
+        width: 100vw;
+        height: 100vh;
     }
 
-}
+    .mobile{
+        display: block;
+    }
 
+    .desktop{
+        display: none;
+    }
+    
+    details[open] summary {
+        display: none;
+    }
+
+    details[open] h3 {
+        margin: 1rem 0 1rem 1rem;
+    }
+}
 
 
 </style>
