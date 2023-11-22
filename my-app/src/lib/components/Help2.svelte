@@ -30,7 +30,7 @@
             
             <div>
                 <input type="text" placeholder="Typ hier je vraag">
-                <button>
+                <button type="button">
                     <img src="src/lib/assets/send.svg" height="24" width="24" alt="stuur bericht" loading="lazy">
                 </button>  
             </div>  
